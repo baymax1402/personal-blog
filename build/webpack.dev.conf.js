@@ -5,6 +5,7 @@ const merge = require("webpack-merge"); //webpack配置文件合并
 const fo = require("eslint-friendly-formatter");
 // https://www.npmjs.com/package/stylelint-webpack-plugin
 const StyleLintPlugin = require("stylelint-webpack-plugin");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const baseWebpackConfig = require("./webpack.base.conf"); //基础配置
 const config = require("../config"); //一些路径配置
@@ -54,8 +55,7 @@ let devWebpackConfig = merge(baseWebpackConfig, {
       },
       {
         test: /\.(css|pcss)$/,
-        loader:
-          "style-loader?sourceMap!css-loader?sourceMap!postcss-loader?sourceMap",
+        loader: "style-loader?sourceMap!css-loader?sourceMap!postcss-loader?sourceMap",
         exclude: /node_modules/
       }
     ]

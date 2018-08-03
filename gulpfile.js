@@ -1,11 +1,13 @@
 require("json5/lib/register");
 const fs = require("fs");
+const rm = require("rimraf");
 const path = require("path");
 const gulp = require("gulp");
 const vsftp = require("gulp-vsftp");
 const zip = require("gulp-zip");
 const moment = require("moment-kirk");
-const account = require("./config/default.json5");
+
+// const account = require("./config/default.json5");
 
 const config = require("./config");
 const packageInfo = require("./package.json");
@@ -60,4 +62,10 @@ gulp.task("pre", function() {
             remotePath: account.pordPath
         })
     );
+});
+// 打包img
+gulp.task('img',  function() {
+    rm.sync(config.imgDirectory);
+    return gulp.src('app/public/img/**/*')
+            .pipe(gulp.dest('devBuild/assets/img'));
 });

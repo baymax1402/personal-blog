@@ -13,7 +13,7 @@ for (let name in entry) {
 const baseWebpackConfig = {
     entry: newEntry,
     resolve: {
-        extensions: [".js", ".json", ".jsx"],
+        extensions: [".js", ".json", ".jsx", ".css", ".pcss"],
         alias: {
           // "@app": path.resolve("../../app"),
         }

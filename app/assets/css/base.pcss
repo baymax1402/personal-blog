@@ -1,0 +1,99 @@
+/**
+ * reset html tag
+ * --------------------------------------------------
+ */
+
+body,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select,
+button,
+blockquote,
+th,
+td,
+hr,
+article,
+aside,
+details,
+figcaption,
+figure,
+header,
+footer,
+section,
+hgroup,
+menu,
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+ol,
+ul,
+li {
+  list-style: none outside none;
+}
+
+img {
+  border: 0;
+}
+
+input,
+select,
+button {
+  outline: 0;
+
+  &::-moz-focus-inner {
+    border-color: transparent !important;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &::-moz-focus-inner {
+    border-color: transparent !important;
+  }
+
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+i,
+s {
+  display: inline-block;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.hide {
+  display: none;
+}

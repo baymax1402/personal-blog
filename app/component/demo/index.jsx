@@ -7,7 +7,9 @@ class Index extends Component {
     return (
       <div className="cont">
         <Header />
-        <div className="index">demo</div>
+        <div className="index">
+          demo
+        </div>
         <Footer />
       </div>
     );
